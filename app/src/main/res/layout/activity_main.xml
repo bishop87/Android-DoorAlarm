@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numeri abilitati alla trasmissione"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btnAggiungiNumero"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnAggiungiNumeroAbilitatoClick"
+        android:text="Aggiungi Numero" />
+
+
+    <ListView
+        android:id="@+id/lvNumeriAbilitati"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:listitem="@layout/row"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <Button
+            android:id="@+id/btnTestStartRing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:onClick="btnTestStartClick"
+            android:text="Test Start Ring" />
+
+        <Button
+            android:id="@+id/btnTestStopRing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:onClick="btnTestStopClick"
+            android:text="Test Stop Ring" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnReadStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnReadStatusClick"
+        android:text="Verifica Status Batteria" />
+
+    <ScrollView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+    </ScrollView>
+
+</LinearLayout>
